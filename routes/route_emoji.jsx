@@ -10,14 +10,14 @@ export default {
     },
     indexRoute: {
         getComponents: (location, callback) => {
-            import('components/emoji/components/emoji_list.jsx').then(RouteUtils.importComponentSuccess(callback));
+            import('components/emoji').then(RouteUtils.importComponentSuccess(callback));
         }
     },
     childRoutes: [
         {
             path: 'add',
             getComponents: (location, callback) => {
-                import('components/emoji/components/add_emoji.jsx').then(RouteUtils.importComponentSuccess(callback));
+                import('components/emoji/add_emoji.jsx').then(RouteUtils.importComponentSuccess(callback));
             }
         }
     ]
